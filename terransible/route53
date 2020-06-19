@@ -1,0 +1,13 @@
+{
+    "Location": "https://route53.amazonaws.com/2013-04-01/delegationset/N07130753T3ZLO445EFMU", 
+    "DelegationSet": {
+        "NameServers": [
+            "ns-1175.awsdns-18.org", 
+            "ns-1708.awsdns-21.co.uk", 
+            "ns-61.awsdns-07.com", 
+            "ns-519.awsdns-00.net"
+        ], 
+        "CallerReference": "1224", 
+        "Id": "/delegationset/N07130753T3ZLO445EFMU"
+    }
+}
