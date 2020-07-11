@@ -1,11 +1,47 @@
-# Configure the AWS Provider
+/*
+Multi-line comment
+*/
+
+#Configure the AWS Provider
 
 provider "aws" {
-    version = "~> 2.65"
+    version = "~> 2.69"
+    access_key = "AKIA2CNS6V3NVLRR7WSP"
+    secret_key = "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"
     region = "us-east-1"
 }
 
-# Create a vpc 
+#Create a VPC
+
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+  instance_tenancy = "default"
+  tags = {
+    Name = "moh_vpc"
+  }
+}
+
+#Create a subnet
+
+resource "aws_subnet" "main" {
+  vpc_id = "${aws_vpc.main.id}"
+  cidr_block = "10.0.0.0/16"
+  tags = {
+    Name = "moh_subnet"
+  }
+}
 
 
+#Create a Instance 
+
+resource "aws_instance" "foobar" {
+    #ami = "ami-08f3d892de259504d"
+    ami = "ami-098f16afa9edf40be"
+    instance_type = "t2.medium"
+
+    tags = {
+    Name = "moh_instance"
+  }
+
+}
 
