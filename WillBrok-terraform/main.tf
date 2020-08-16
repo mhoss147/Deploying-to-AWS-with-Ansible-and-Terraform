@@ -6,8 +6,8 @@ Multi-line comment
 
 provider "aws" {
     version = "~> 2.69"
-    access_key = "AKIA2CNS6V3NVLRR7WSP"
-    secret_key = "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"
+    access_key = "AKIA...RR7WSP"
+    secret_key = "BP2Aw10x/...+ogFMZAsKk"
     region = "us-east-1"
 }
 
